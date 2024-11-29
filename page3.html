@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign UP</title>
+    <link rel="stylesheet" href="style.css">
+    
+<style>
+
+form {
+    display: flex;
+    flex-direction: column; 
+}
+
+label {
+    margin-top: 10px; 
+    font-weight: bold; 
+}
+input[type="text"];
+input[type="email"];
+input[type="tel"];
+select {
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    margin-top: 5px;
+}
+
+input[type="submit"] {
+    margin-top: 15px; 
+    padding: 10px; 
+    background-color: #f12875; 
+    color: rgb(255, 255, 255); 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+input[type="submit"]:hover {
+    background-color: #df22d5; 
+}
+
+.contact-info {
+    margin-top: 15px; 
+    text-align: center;
+}
+
+.email-box {
+    background-color: #f12875; 
+    padding: 35px; 
+    border-radius: 5px; 
+     display: inline-block; 
+}
+
+.contact-info a {
+    color:#aa5c5c; 
+    text-decoration: none; 
+    font-size: 30px;
+}
+
+.contact-info a:hover {
+    text-decoration: underline; 
+}
+</style>
+</head>
+<body>
+
+    <section id="contact">
+        <h2>Enter Your Information Kindly</h2>
+        <form method="POST" action="/submit-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Your Name">
+    
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+    
+            <label for="phone">Your Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="123-456-7890">
+    
+            <label for="country">Your Country:</label>
+            <select id="country" name="country" required>
+                <option value="" disabled selected>Select your country</option>
+                <option value="Egypt">Egypt</option>
+                <option value="Jordan">Jordan</option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="Palestine">Palestine</option>
+                <option value="Lebanon">Lebanon</option>
+                <option value="Iraq">Iraq</option>
+                <option value="Kuwait">Kuwait</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Morocco">Morocco</option>
+                <option value="Tunisia">Tunisia</option>
+            </select>
+            <label for="age">Your Age:</label>
+            <input type="number" id="age" name="age" required placeholder="Your Age" min="0">
+    
+            <label for="address">Your Address:</label>
+            <textarea id="address" name="address" required placeholder="Your Address"></textarea>
+    
+            <label for="medical-history">Medical History:</label>
+            <textarea id="medical-history" name="medical-history" required placeholder="Briefly describe your medical history"></textarea>
+    
+            <label for="doctor">Name of Your Doctor:</label>
+            <input type="text" id="doctor" name="doctor" required placeholder="Doctor's Name">
+    
+            <input type="submit" value="Send">
+        </form>
+    </section>
+</body>
+</html>
